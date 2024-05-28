@@ -1,7 +1,8 @@
 const Footer = () => {
   return (
-    <div>
-      <h4>Footer</h4>
+    <div className="footer">
+      
+      Link zu Github 
     </div>
   );
 };

@@ -1,6 +1,10 @@
 const Navbar = () => {
   return (
-    <div>Navbar</div>
-  )
-}
-export default Navbar
+    <div className="navbar">
+      <div>Burger</div>
+      <div>Navbar</div>
+      <div></div>
+    </div>
+  );
+};
+export default Navbar;

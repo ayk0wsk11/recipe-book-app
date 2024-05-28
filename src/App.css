@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.app{
+    margin: 0vw 0vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.navbar{
+   
+    background-color: aquamarine;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4vh;
+    padding: 0px 15px;
+}
+
+.middleContent{
+    display: flex;
+    height: 92vh;
+
+}
+
+.sidebar{
+    background-color: rgb(125, 116, 116);
+    width: 10%;
+    padding: 0px 15px;
+
+    
+}
+
+.footer{
+    height: 4vh;
+    width: 100%;
+    background-color: grey;
+    padding: 0px 15px;
+
+}
+
