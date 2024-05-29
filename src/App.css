@@ -1,12 +1,16 @@
 body {
     margin: 0;
     padding: 0;
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
 }
 
 .app{
-    margin: 0vw 0vw;
+    margin: 0;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-direction: column;
 }
 
@@ -24,9 +28,8 @@ body {
     height: 2.5vh;
 }
 
-.middleContent{
+.content{
     display: flex;
-    height: 92vh;
 
 }
 
@@ -42,18 +45,45 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 4vh;
     width: 100%;
     background-color: #3f3ff0;
     padding: 0px 15px;
+    height: 4vh;
 
 }
 
 .footer img{
-    height: 3vh;
+    height: 2.5vh;
     color: white;
 }
 .footer a{
     color:rgb(215, 206, 206);
+}
+
+.recipes{
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(105, 105, 185);
+    
+}
+
+.list {
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.item-card {
+    width: 50vw;
+  margin: 5px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: white;
 }
 
