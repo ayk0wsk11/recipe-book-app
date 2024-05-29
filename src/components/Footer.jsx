@@ -1,8 +1,9 @@
+import GitLogo from "../images/github-logo.png"
 const Footer = () => {
   return (
     <div className="footer">
-      
-      Link zu Github 
+      <img src={GitLogo} alt="GitLogo"/>
+      <a href="https://github.com/ayk0wsk11/recipe-book-app.git" target="_blank"> Link to Github Repository</a>
     </div>
   );
 };

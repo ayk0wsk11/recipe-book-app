@@ -20,6 +20,10 @@ body {
     padding: 0px 15px;
 }
 
+.navbar img{
+    height: 2.5vh;
+}
+
 .middleContent{
     display: flex;
     height: 92vh;
@@ -35,10 +39,21 @@ body {
 }
 
 .footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 4vh;
     width: 100%;
-    background-color: grey;
+    background-color: #3f3ff0;
     padding: 0px 15px;
 
+}
+
+.footer img{
+    height: 3vh;
+    color: white;
+}
+.footer a{
+    color:rgb(215, 206, 206);
 }
 
