@@ -9,7 +9,7 @@ function App() {
     <>
       <div className="app">
         <Navbar />
-
+        
         <div className="content">
           <Sidebar />
           <div className="recipes">
