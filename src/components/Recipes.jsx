@@ -1,24 +1,27 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-// import recipesJson from "../assets/recipes.json";
+
 import ItemCard from "./ItemCard";
 
 const Recipes = ({ data }) => {
-  const [recipe, setRecipe] = useState(data);
+  const [recipes, setRecipes] = useState(data);
 
-  function handleDeleteRecipe(recipeId, event) {
+  function handleDeleteRecipe(id, event) {
     event.preventDefault();
-    setRecipe(recipe.filter((aRecipeId) => recipeId !== aRecipeId.id));
+    setRecipes(recipes.filter((recipe) => id !== recipe.id));
   }
 
   return (
     <div className="recipes">
-      {recipe.map((recipe) => {return(
-        <Link key={recipe.id} to={`/recipeDetail/${recipe.id}`}>
-          <ItemCard recipe={recipe} deleteHandler={handleDeleteRecipe} />
-        </Link>
-      )})}
+      {recipes.map((recipe) => {
+        return (
+          <Link key={recipe.id} to={`/recipe-details/${recipe.id}`}>
+            <ItemCard recipe={recipe} deleteHandler={handleDeleteRecipe} />
+          </Link>
+        );
+      })}
     </div>
   );
 };
+
 export default Recipes;

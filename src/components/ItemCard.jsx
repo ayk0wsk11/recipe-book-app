@@ -1,17 +1,17 @@
 const ItemCard = ({ recipe, deleteHandler }) => {
-  console.log(recipe);
-  console.log(deleteHandler);
+  function isMeal() {
+    if (recipe.calories > 250) return <span>Meal</span>;
+    return <span>Snack</span>;
+  }
+
   return (
     <div className="item-card">
-      <img src={recipe.image}/>
+      <img src={recipe.image} />
       <p>{recipe.name}</p>
-      {recipe.calories > 300 ? (
-        <span>This is not very healthy</span>
-      ) : (
-        <span>This seems healthy</span>
-      )}
+      {isMeal()}
       <div>
-        <button id="delete-btn"
+        <button
+          id="delete-btn"
           onClick={(event) => {
             deleteHandler(recipe.id, event);
           }}
@@ -22,4 +22,5 @@ const ItemCard = ({ recipe, deleteHandler }) => {
     </div>
   );
 };
+
 export default ItemCard;

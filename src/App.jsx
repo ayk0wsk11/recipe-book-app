@@ -1,35 +1,40 @@
+import { Route, Routes } from "react-router-dom";
+
 import "./App.css";
-import Footer from "./components/Footer";
+
+/* import components */
 import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
-import Recipes from "./components/Recipes";
-import { Route, Routes } from "react-router-dom";
-import NotFound from "./pages/NotFound";
-import RecipeDetails from "./pages/RecipeDetails";
-import recipesJson from "./assets/recipes.json"
-import About from "./pages/About";
-import Dashboard from "./pages/Dashboard";
+import Footer from "./components/Footer";
 
+/* import pages*/
+import Dashboard from "./pages/Dashboard";
+import RecipeDetails from "./pages/RecipeDetails";
+import About from "./pages/About";
+import NotFound from "./pages/NotFound";
+
+/* import recipe data */
+import recipesJson from "./assets/recipes.json";
 
 function App() {
-  const data = recipesJson
+  const data = recipesJson;
   return (
-    <>
-      <div className="app">
-        <Navbar /> 
-        <div className="content">
+    <div className="app">
+      <Navbar />
+      <div className="content">
         <Sidebar />
         <Routes>
-          <Route path="/" element={<Dashboard data={data}/>} />
-          <Route path="/recipeDetail/:id" element={<RecipeDetails data={data}/>}/>
+          <Route path="/" element={<Dashboard data={data} />} />
+          <Route
+            path="/recipe-details/:id"
+            element={<RecipeDetails data={data} />}
+          />
+          <Route path="/about" element={<About />} />
           <Route path="*" element={<NotFound />} />
-          <Route path="/about" element={<About/>}/>
         </Routes>
-        </div>
-
-        <Footer />
       </div>
-    </>
+      <Footer />
+    </div>
   );
 }
 

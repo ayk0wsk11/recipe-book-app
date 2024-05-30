@@ -1,10 +1,9 @@
 const About = () => {
   return (
     <div>
-        <h2>Ayko and Joni</h2>
-        
-
+      <h2>Ayko and Joni</h2>
     </div>
-  )
-}
-export default About
+  );
+};
+
+export default About;
