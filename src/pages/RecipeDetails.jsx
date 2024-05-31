@@ -4,9 +4,12 @@ const RecipeDetails = ({ data }) => {
   const { id } = useParams();
   const recipe = data.find((recipe) => recipe.id == id);
   return (
-    <div>
-      <h1>{recipe.name}</h1>
-      <h3>{recipe.calories}</h3>
+    <div className="recipe-detail">
+      <img src={recipe.image}/>
+      <div className="recipe-detail-text">
+      <h1>Recipe:{recipe.name}</h1>
+      <h3>Calories:{recipe.calories}</h3>
+      </div>
     </div>
   );
 };

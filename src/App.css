@@ -96,3 +96,41 @@ body {
   width: 20%;
   border: 2px solid;
 }
+.recipe-detail {
+  display: flex;
+}
+
+.recipe-detail img {
+  width: 20vw;
+}
+.recipe-detail-text {
+  display: flex;
+  flex-direction: column;
+}
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+form {
+  font-weight: 500;
+  margin: 20px;
+  
+}
+input{
+  margin: 0 5px
+}
+
+#add-recipe-btn{
+  border-radius: 5px;
+  font-weight: bold;
+  background-color: white;
+  padding: 5px;
+}
+
+.navbar h3{
+  font-weight: bold;
+
+}

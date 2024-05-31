@@ -1,4 +1,5 @@
 import { Route, Routes } from "react-router-dom";
+import { useState } from "react";
 
 import "./App.css";
 
@@ -17,17 +18,18 @@ import NotFound from "./pages/NotFound";
 import recipesJson from "./assets/recipes.json";
 
 function App() {
-  const data = recipesJson;
+  const [recipes, setRecipes] = useState(recipesJson);
+
   return (
     <div className="app">
       <Navbar />
       <div className="content">
         <Sidebar />
         <Routes>
-          <Route path="/" element={<Dashboard data={data} />} />
+          <Route path="/" element={<Dashboard data={recipes} dataHandler={setRecipes} />} />
           <Route
             path="/recipe-details/:id"
-            element={<RecipeDetails data={data} />}
+            element={<RecipeDetails data={recipes} />}
           />
           <Route path="/about" element={<About />} />
           <Route path="*" element={<NotFound />} />

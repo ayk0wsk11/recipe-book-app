@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import NavbarIcon from "../images/menu-icon.png";
 
 const Navbar = () => {
@@ -6,8 +7,14 @@ const Navbar = () => {
       <div>
         <img src={NavbarIcon} />
       </div>
-      <div>Navbar</div>
-      <div></div>
+
+      <Link to={"/"}>
+        <div><h3>Home</h3></div>
+      </Link>
+
+      <Link to={"/about"}>
+        <div><h3>About</h3></div>
+      </Link>
     </div>
   );
 };
