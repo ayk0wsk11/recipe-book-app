@@ -13,6 +13,7 @@ import Dashboard from "./pages/Dashboard";
 import RecipeDetails from "./pages/RecipeDetails";
 import About from "./pages/About";
 import NotFound from "./pages/NotFound";
+import { Edit } from "./pages/Edit";
 
 /* import recipe data */
 import recipesJson from "./assets/recipes.json";
@@ -26,12 +27,19 @@ function App() {
       <div className="content">
         <Sidebar />
         <Routes>
-          <Route path="/" element={<Dashboard data={recipes} dataHandler={setRecipes} />} />
+          <Route
+            path="/"
+            element={<Dashboard data={recipes} dataHandler={setRecipes} />}
+          />
           <Route
             path="/recipe-details/:id"
             element={<RecipeDetails data={recipes} />}
           />
           <Route path="/about" element={<About />} />
+          <Route
+            path="/edit/:id"
+            element={<Edit data={recipes} dataHandler={setRecipes} />}
+          />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>

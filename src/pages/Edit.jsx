@@ -1,37 +1,37 @@
 import { useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 
-const AddRecipe = ({ data, dataHandler }) => {
-  const [name, setName] = useState("");
-  const [image, setImage] = useState("");
-  const [calories, setCalories] = useState(0);
-  const [servings, setServings] = useState(1);
+export const Edit = ({ data, dataHandler }) => {
+  const { id } = useParams();
+  const foundRecipe = data.find((recipe) => (recipe.id === id)); 
 
-  function handleAddRecipe(event) {
+  const [name, setName] = useState(foundRecipe.name); 
+  const [calories, setCalories] = useState(foundRecipe.calories);
+  const [image, setImage] = useState(foundRecipe.image);
+  const [servings, setServings] = useState(foundRecipe.servings);
+
+  const nav = useNavigate();
+  
+  function handleEdit(event) {
     event.preventDefault();
-    const newRecipe = {
-      id: data.length + 1,
-      name,
-      calories,
-      image,
-      servings,
-    };
-
-    dataHandler([...data, newRecipe]);
-
-    
-
+    const updated = {id, name, calories, image, servings };
+    const updatedRecipes = data.map((recipe) => recipe.id === id ? updated : recipe)
+    dataHandler(updatedRecipes);
+    nav("/");
   }
+
   return (
     <div>
-      {/* FORM */}
-      <form onSubmit={handleAddRecipe}>
-        <h3 id="add-recipe">Add a Recipe</h3>
+      <h1>Edit Recipe</h1>
+
+      <form onSubmit={handleEdit}>
         <div>
           <label>
             Name:   
             <input
               name="name"
               type="text"
+              value={name}
               onChange={(event) => {
                 setName(event.target.value);
               }}
@@ -43,6 +43,7 @@ const AddRecipe = ({ data, dataHandler }) => {
             Calories:
             <input
               name="calories"
+              value={calories}
               type="number"
               min={0}
               onChange={(event) => {
@@ -68,6 +69,7 @@ const AddRecipe = ({ data, dataHandler }) => {
             Servings:
             <input
               name="servings"
+              value={servings}
               type="number"
               min={1}
               onChange={(event) => {
@@ -83,4 +85,3 @@ const AddRecipe = ({ data, dataHandler }) => {
     </div>
   );
 };
-export default AddRecipe;

@@ -29,6 +29,14 @@ body {
   height: 2.5vh;
 }
 
+.navbar h3 {
+  font-weight: bold;
+}
+#navbar-btn{
+  background-color: transparent;
+  border: none;
+}
+
 .content {
   display: flex;
   height: 100%;
@@ -58,12 +66,26 @@ body {
   color: rgb(215, 206, 206);
 }
 
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
 .recipes {
   display: flex;
   width: 90%;
   flex-direction: column;
   align-items: center;
   background-color: rgb(105, 105, 185);
+}
+
+#add-recipe-btn {
+  border-radius: 5px;
+  font-weight: bold;
+  background-color: white;
+  padding: 5px;
 }
 
 .list {
@@ -85,17 +107,24 @@ body {
   align-items: center;
 }
 
+.item-card img {
+  width: 20%;
+  border: 2px solid;
+}
 #delete-btn {
+  border-radius: 5px;
+  font-weight: bold;
+  background-color: white;
+  padding: 5px;
+  margin-left: 5px ;
+}
+#edit-btn{
   border-radius: 5px;
   font-weight: bold;
   background-color: white;
   padding: 5px;
 }
 
-.item-card img {
-  width: 20%;
-  border: 2px solid;
-}
 .recipe-detail {
   display: flex;
 }
@@ -107,30 +136,11 @@ body {
   display: flex;
   flex-direction: column;
 }
-.dashboard {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  align-items: center;
-}
 
 form {
   font-weight: 500;
   margin: 20px;
-  
 }
-input{
-  margin: 0 5px
-}
-
-#add-recipe-btn{
-  border-radius: 5px;
-  font-weight: bold;
-  background-color: white;
-  padding: 5px;
-}
-
-.navbar h3{
-  font-weight: bold;
-
+input {
+  margin: 0 5px;
 }

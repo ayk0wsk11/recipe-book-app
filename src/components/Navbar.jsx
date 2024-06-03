@@ -5,7 +5,9 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <div>
+        <button id="navbar-btn">
         <img src={NavbarIcon} />
+        </button>
       </div>
 
       <Link to={"/"}>
