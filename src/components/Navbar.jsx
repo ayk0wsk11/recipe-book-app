@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 import NavbarIcon from "../images/menu-icon.png";
 
-const Navbar = () => {
+const Navbar = ({sidebarHandler}) => {
   return (
     <div className="navbar">
       <div>
-        <button id="navbar-btn">
+        <button id="navbar-btn" onClick={()=>{sidebarHandler()}}>
         <img src={NavbarIcon} />
         </button>
       </div>

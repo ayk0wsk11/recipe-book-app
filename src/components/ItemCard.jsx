@@ -1,21 +1,6 @@
 import { Link } from "react-router-dom";
 
 const ItemCard = ({ recipe, editHandler, deleteHandler }) => {
-  function isMeal() {
-    if (recipe.calories > 250)
-      return (
-        <h4>
-          Type: <br />
-          Meal
-        </h4>
-      );
-    return (
-      <h4>
-        Type: <br />
-        Snack
-      </h4>
-    );
-  }
 
   return (
     <div className="item-card">
@@ -28,9 +13,17 @@ const ItemCard = ({ recipe, editHandler, deleteHandler }) => {
       <h4>
         Calories:
         <br />
-        {recipe.calories}
+        {recipe.calories * recipe.servings}
       </h4>
-      {isMeal()}
+      <h4>
+        Servings:
+        <br/>
+        {recipe.servings}
+      </h4>
+      <h4>
+      Type: <br />
+      {recipe.calories > 250 ? <>Meal</> : <>Snack</>}
+      </h4>
       <div>
 
         

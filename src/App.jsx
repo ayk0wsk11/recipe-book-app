@@ -20,12 +20,17 @@ import recipesJson from "./assets/recipes.json";
 
 function App() {
   const [recipes, setRecipes] = useState(recipesJson);
+  const [sidebarClosed, setSidebarState] = useState(true);
+
+  function sidebarHandler() {
+    setSidebarState(!sidebarClosed);
+  }
 
   return (
     <div className="app">
-      <Navbar />
+      <Navbar sidebarHandler={sidebarHandler} />
       <div className="content">
-        <Sidebar />
+        <Sidebar recipes={recipes} sidebarClosed={sidebarClosed} />
         <Routes>
           <Route
             path="/"

@@ -79,7 +79,7 @@ export const Edit = ({ data, dataHandler }) => {
             />
           </label>
 
-          <button id="add-recipe-btn" type="submit">Add Recipe</button>
+          <button id="add-recipe-btn" type="submit">Edit Recipe</button>
         </div>
       </form>
     </div>
