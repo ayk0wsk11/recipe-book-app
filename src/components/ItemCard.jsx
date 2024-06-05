@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 
 const ItemCard = ({ recipe, editHandler, deleteHandler }) => {
-
   return (
     <div className="item-card">
       <img src={recipe.image} />
@@ -17,20 +16,22 @@ const ItemCard = ({ recipe, editHandler, deleteHandler }) => {
       </h4>
       <h4>
         Servings:
-        <br/>
+        <br />
         {recipe.servings}
       </h4>
       <h4>
-      Type: <br />
-      {recipe.calories > 250 ? <>Meal</> : <>Snack</>}
+        Type: <br />
+        {recipe.calories > 250 ? <>Meal</> : <>Snack</>}
       </h4>
       <div>
-
-        
-        <button id="edit-btn" onClick={(event)=>{editHandler(recipe.id, event)}}>
+        <button
+          id="edit-btn"
+          onClick={(event) => {
+            editHandler(recipe.id, event);
+          }}
+        >
           Edit
         </button>
-        
 
         <button
           id="delete-btn"

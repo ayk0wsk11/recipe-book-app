@@ -21,7 +21,7 @@ const Recipes = ({ data, dataHandler }) => {
     <div className="recipes">
       {data.map((data) => {
         return (
-          <Link key={data.id} to={`/recipe-details/${data.id}`}>
+          <Link id="item-card-link" key={data.id} to={`/recipe-details/${data.id}`}>
             <ItemCard recipe={data} editHandler={handleEditRecipe} deleteHandler={handleDeleteRecipe} />
           </Link>
         );

@@ -9,7 +9,7 @@ const Sidebar = ({ recipes, sidebarClosed }) => {
       <ul className="sidebar-ul">
         {recipes.map((recipe) => {
           return (
-            <NavLink key={recipe.id} to={`/recipe-details/${recipe.id}`}>
+            <NavLink id="sidebar-links" key={recipe.id} to={`/recipe-details/${recipe.id}`}>
               <li>{recipe.name}</li>
             </NavLink>
           );

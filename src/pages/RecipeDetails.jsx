@@ -1,22 +1,21 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 
-
 const RecipeDetails = ({ data }) => {
   const { id } = useParams();
   const nav = useNavigate();
-  
-  const recipe = data.find((recipe) => recipe.id == id);
-  
-  // useEffect(() => {
-  //   console.log("recipe", recipe)
-  //   if(recipe === undefined) {
-      
-  //     nav("*");
-  // }
-  // }, [recipe]);
-  
 
+  const recipe = data.find((recipe) => recipe.id == id);
+
+  useEffect(() => {
+    if (!recipe) {
+      nav("*");
+    }
+  }, []);
+
+  if (!recipe) {
+    return null; // Render nothing while navigating
+  }
 
   return (
     <div className="recipe-detail">
