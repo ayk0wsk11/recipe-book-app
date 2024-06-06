@@ -9,7 +9,7 @@ const ItemCard = ({ recipe, editHandler, deleteHandler }) => {
           <b>{recipe.name}</b>
         </span>
         <p>
-          {recipe.calories < 250 ? <span id="type">Snack</span> : <></>}
+          {recipe.calories < 250 ? <span id="type">Snack</span> : <span id="type-2">Meal</span>}
           <i>
             {recipe.calories * recipe.servings}kcal / {recipe.servings}{" "}
             {recipe.servings == 1 ? <>serving</> : <>servings</>}
