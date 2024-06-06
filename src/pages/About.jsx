@@ -12,10 +12,10 @@ const About = () => {
           </h4>
           <h4>About me</h4>
           <ul>
-            <li>From: </li>
+            <li>From: Berlin</li>
             <li>Based in: Berlin</li>
-            <li>Favortie song: </li>
-            <li>Favorite hobby: </li>
+            <li>Favortie song: Norwegian Wood - The Beatles</li>
+            <li>Favorite hobby: Jamming and making music</li>
           </ul>
         </div>
         <div>
@@ -30,7 +30,9 @@ const About = () => {
             <li>From: Berlin</li>
             <li>Based in: Berlin</li>
             <li>Favortie song: Jammin - Bob Marley</li>
-            <li>Favorite hobby: Playing table tennis, watching/playing football</li>
+            <li>
+              Favorite hobby: Playing table tennis, watching/playing football
+            </li>
           </ul>
         </div>
       </div>

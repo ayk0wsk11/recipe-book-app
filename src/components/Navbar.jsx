@@ -17,17 +17,10 @@ const Navbar = ({ sidebarHandler }) => {
       </div>
 
       <Link className="navbar-links" to={"/"}>
-        <div className="navbar-logo">
-          <img src={NavbarLogo} />
-          <h2>Home</h2>
-        </div>
+        <img className="navbar-logo" src={NavbarLogo} />
       </Link>
 
-      <Link className="navbar-links" to={"/about"}>
-        <div>
-          <h2>About</h2>
-        </div>
-      </Link>
+      <div></div>
     </div>
   );
 };

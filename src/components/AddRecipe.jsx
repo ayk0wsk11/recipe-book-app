@@ -17,18 +17,14 @@ const AddRecipe = ({ data, dataHandler }) => {
     };
 
     dataHandler([...data, newRecipe]);
-
-    
-
   }
   return (
     <div>
       {/* FORM */}
       <form onSubmit={handleAddRecipe}>
-        <h3 id="add-recipe">Add a Recipe</h3>
         <div>
           <label>
-            Name:   
+            Name:
             <input
               name="name"
               type="text"
@@ -77,7 +73,9 @@ const AddRecipe = ({ data, dataHandler }) => {
             />
           </label>
 
-          <button id="add-recipe-btn" type="submit">Add Recipe</button>
+          <button id="add-recipe-btn" type="submit">
+            Add Recipe
+          </button>
         </div>
       </form>
     </div>
